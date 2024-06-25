@@ -1,6 +1,6 @@
-const tasksData = require('./seed_tasks');
-const sessionsData = require('./seed_sessions');
-const forceBreaksData = require('./seed_force_breaks');
+const tasksData = require('../seed-data/seed_tasks');
+const sessionsData = require('../seed-data/seed_sessions');
+const forceBreaksData = require('../seed-data/seed_force_breaks');
 
 exports.seed = async function(knex) {
   await knex('tasks').del();

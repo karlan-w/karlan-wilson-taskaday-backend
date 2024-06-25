@@ -5,6 +5,7 @@
 exports.up = function(knex) {
   return knex.schema.createTable('sessions',function(table){
     table.increments('session_id').primary();
+    table.uuid('task_id').notNullable();
     table
         .foreign('task_id')
         .references('task_id')

@@ -4,7 +4,8 @@
  */
 exports.up = function(knex) {
   return knex.schema.createTable('forcebreaks',function(table){
-    table.incremental('force_break_id');
+    table.increments('force_break_id').primary().notNullable();
+    table.uuid('task_id').notNullable();
     table
         .foreign('task_id')
         .references('task_id')
@@ -20,5 +21,5 @@ exports.up = function(knex) {
  * @returns { Promise<void> }
  */
 exports.down = function(knex) {
-  
+  return knex.schema.dropTable('forcebreaks');
 };
