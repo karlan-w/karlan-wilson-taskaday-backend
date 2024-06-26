@@ -40,5 +40,23 @@ module.exports =[
         name: 'Create navbar for captstone',
         date: 'June 20 2024',
         session_total:'3'
+    },
+    {
+        task_id:'d380d0ba-63ac-408a-a5e0-7ef213f5b731',
+        name: 'Add to seeds for capstone',
+        date: 'June 23 2024',
+        session_total:'2'
+    },
+    {
+        task_id:'3f7d40f0-4f39-4108-85d3-c690dcfadef4',
+        name: 'Create timer in html',
+        date: 'June 24 2024',
+        session_total:'3'
+    },
+    {
+        task_id:'ded2e18a-523c-4e9b-8b75-272ed04b5734',
+        name: 'Additional ticket reviews for work',
+        date: 'June 25 2024',
+        session_total:'2'
     }
 ]

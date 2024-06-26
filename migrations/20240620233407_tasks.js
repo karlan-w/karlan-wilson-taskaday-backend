@@ -7,6 +7,7 @@ exports.up = function(knex) {
         table.uuid('task_id').primary().notNullable();
         table.string('name').notNullable();
         table.string('date').notNullable();
+        table.index(['date'],'index_date');
         table.integer('session_total').notNullable();
     })
 };

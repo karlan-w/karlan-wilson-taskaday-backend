@@ -12,6 +12,13 @@ exports.up = function(knex) {
         .inTable('tasks')
         .onUpdate('CASCADE')
         .onDelete('CASCADE');
+    table.string('date').notNullable();
+    table
+      .foreign('date')
+      .references('date')
+      .inTable('tasks')
+      .onUpdate('CASCADE')
+      .onDelete('CASCADE');
     table.time('time');
   })
 };
