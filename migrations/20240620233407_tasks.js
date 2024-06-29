@@ -8,7 +8,6 @@ exports.up = function(knex) {
         table.string('name').notNullable();
         table.string('date').notNullable();
         table.index(['date'],'index_date');
-        table.integer('session_total').notNullable();
     })
 };
 
