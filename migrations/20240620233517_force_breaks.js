@@ -3,7 +3,7 @@
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {
-  return knex.schema.createTable('forcebreaks',function(table){
+  return knex.schema.createTable('force_breaks',function(table){
     table.increments('force_break_id').primary().notNullable();
     table.uuid('task_id').notNullable();
     table
@@ -28,5 +28,5 @@ exports.up = function(knex) {
  * @returns { Promise<void> }
  */
 exports.down = function(knex) {
-  return knex.schema.dropTable('forcebreaks');
+  return knex.schema.dropTable('force_breaks');
 };

@@ -3,15 +3,9 @@
  * @returns { Promise<void> }
  */
 exports.up = function(knex) {
-  return knex.schema.createTable('sessions',function(table){
-    table.increments('session_id').primary();
+  return knex.schema.createTable('focus_times',function(table){
+    table.increments('focus_id').primary();
     table.uuid('task_id').notNullable();
-    table
-        .foreign('task_id')
-        .references('task_id')
-        .inTable('tasks')
-        .onUpdate('CASCADE')
-        .onDelete('CASCADE');
     table.string('date').notNullable();
     table
         .foreign('date')
@@ -20,7 +14,6 @@ exports.up = function(knex) {
         .onUpdate('CASCADE')
         .onDelete('CASCADE');
     table.time('focus_time');
-    table.time('break_time');
   })
 };
 
@@ -29,5 +22,5 @@ exports.up = function(knex) {
  * @returns { Promise<void> }
  */
 exports.down = function(knex) {
-  return knex.schema.dropTable('sessions');
+  return knex.schema.dropTable('focus_times');
 };
